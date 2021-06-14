@@ -8,7 +8,7 @@ function App() {
 
   const [weatherInfo, setweatherInfo] = useState();
   const [gotData, updateGotData] = useState(false);
-  const [url , updateUrl ] = useState(`http://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=delhi&days=7&aqi=no&alerts=no`)
+  const [url , updateUrl ] = useState(`https://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=delhi&days=7&aqi=no&alerts=no`)
 
   useEffect(() => {
     fetch(url)
@@ -42,7 +42,7 @@ function App() {
                 alert("please enter a valid city name")
               }
               else{
-                updateUrl(`http://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${input_text}&days=7&aqi=no&alerts=no`);
+                updateUrl(`https://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${input_text}&days=7&aqi=no&alerts=no`);
               }
             }}>Search</div>
           </form>
